@@ -1,100 +1,15 @@
 <div align="center">
-  <img src="nanobot_logo.png" alt="nanobot" width="500">
-  <h1>nanobot: Ultra-Lightweight Personal AI Agent</h1>
+  <h1>nano-grive: Ultra-Lightweight Personal AI Agent</h1>
   <p>
-    <a href="https://pypi.org/project/nanobot-ai/"><img src="https://img.shields.io/pypi/v/nanobot-ai" alt="PyPI"></a>
-    <a href="https://pepy.tech/project/nanobot-ai"><img src="https://static.pepy.tech/badge/nanobot-ai" alt="Downloads"></a>
     <img src="https://img.shields.io/badge/python-≥3.11-blue" alt="Python">
     <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
-    <a href="https://nanobot.wiki/docs/0.1.5/getting-started/nanobot-overview"><img src="https://img.shields.io/badge/Docs-nanobot.wiki-blue?style=flat&logo=readthedocs&logoColor=white" alt="Docs"></a>
-    <a href="./COMMUNICATION.md"><img src="https://img.shields.io/badge/Feishu-Group-E9DBFC?style=flat&logo=feishu&logoColor=white" alt="Feishu"></a>
-    <a href="./COMMUNICATION.md"><img src="https://img.shields.io/badge/WeChat-Group-C5EAB4?style=flat&logo=wechat&logoColor=white" alt="WeChat"></a>
-    <a href="https://discord.gg/MnCvHqpUGB"><img src="https://img.shields.io/badge/Discord-Community-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord"></a>
+    <a href="https://github.com/JesusGon98/Nano-Grive"><img src="https://img.shields.io/badge/GitHub-Nano--Grive-black?style=flat&logo=github" alt="GitHub"></a>
   </p>
 </div>
 
-🐈 **nanobot** is an **ultra-lightweight** personal AI agent inspired by [OpenClaw](https://github.com/openclaw/openclaw).
+**nano-grive** is an ultra-lightweight personal AI agent framework.
 
-⚡️ Delivers core agent functionality with **99% fewer lines of code**.
-
-📏 Real-time line count: run `bash core_agent_lines.sh` to verify anytime.
-
-## 📢 News
-
-- **2026-04-05** 🚀 Released **v0.1.5** — sturdier long-running tasks, Dream two-stage memory, production-ready sandboxing and programming Agent SDK. Please see [release notes](https://github.com/HKUDS/nanobot/releases/tag/v0.1.5) for details.
-- **2026-04-04** 🚀 Jinja2 response templates, Dream memory hardened, smarter retry handling.
-- **2026-04-03** 🧠 Xiaomi MiMo provider, chain-of-thought reasoning visible, Telegram UX polish.
-- **2026-04-02** 🧱 Long-running tasks run more reliably — core runtime hardening.
-- **2026-04-01** 🔑 GitHub Copilot auth restored; stricter workspace paths; OpenRouter Claude caching fix.
-- **2026-03-31** 🛰️ WeChat multimodal alignment, Discord/Matrix polish, Python SDK facade, MCP and tool fixes.
-- **2026-03-30** 🧩 OpenAI-compatible API tightened; composable agent lifecycle hooks.
-- **2026-03-29** 💬 WeChat voice, typing, QR/media resilience; fixed-session OpenAI-compatible API.
-- **2026-03-28** 📚 Provider docs refresh; skill template wording fix.
-- **2026-03-27** 🚀 Released **v0.1.4.post6** — architecture decoupling, litellm removal, end-to-end streaming, WeChat channel, and a security fix. Please see [release notes](https://github.com/HKUDS/nanobot/releases/tag/v0.1.4.post6) for details.
-
-
-<details>
-<summary>Earlier news</summary>
-
-- **2026-03-26** 🏗️ Agent runner extracted and lifecycle hooks unified; stream delta coalescing at boundaries.
-- **2026-03-25** 🌏 StepFun provider, configurable timezone, Gemini thought signatures.
-- **2026-03-24** 🔧 WeChat compatibility, Feishu CardKit streaming, test suite restructured.
-- **2026-03-23** 🔧 Command routing refactored for plugins, WhatsApp/WeChat media, unified channel login CLI.
-- **2026-03-22** ⚡ End-to-end streaming, WeChat channel, Anthropic cache optimization, `/status` command.
-- **2026-03-21** 🔒 Replace `litellm` with native `openai` + `anthropic` SDKs. Please see [commit](https://github.com/HKUDS/nanobot/commit/3dfdab7).
-- **2026-03-20** 🧙 Interactive setup wizard — pick your provider, model autocomplete, and you're good to go.
-- **2026-03-19** 💬 Telegram gets more resilient under load; Feishu now renders code blocks properly.
-- **2026-03-18** 📷 Telegram can now send media via URL. Cron schedules show human-readable details.
-- **2026-03-17** ✨ Feishu formatting glow-up, Slack reacts when done, custom endpoints support extra headers, and image handling is more reliable.
-- **2026-03-16** 🚀 Released **v0.1.4.post5** — a refinement-focused release with stronger reliability and channel support, and a more dependable day-to-day experience. Please see [release notes](https://github.com/HKUDS/nanobot/releases/tag/v0.1.4.post5) for details.
-- **2026-03-15** 🧩 DingTalk rich media, smarter built-in skills, and cleaner model compatibility.
-- **2026-03-14** 💬 Channel plugins, Feishu replies, and steadier MCP, QQ, and media handling.
-- **2026-03-13** 🌐 Multi-provider web search, LangSmith, and broader reliability improvements.
-- **2026-03-12** 🚀 VolcEngine support, Telegram reply context, `/restart`, and sturdier memory.
-- **2026-03-11** 🔌 WeCom, Ollama, cleaner discovery, and safer tool behavior.
-- **2026-03-10** 🧠 Token-based memory, shared retries, and cleaner gateway and Telegram behavior.
-- **2026-03-09** 💬 Slack thread polish and better Feishu audio compatibility.
-- **2026-03-08** 🚀 Released **v0.1.4.post4** — a reliability-packed release with safer defaults, better multi-instance support, sturdier MCP, and major channel and provider improvements. Please see [release notes](https://github.com/HKUDS/nanobot/releases/tag/v0.1.4.post4) for details.
-- **2026-03-07** 🚀 Azure OpenAI provider, WhatsApp media, QQ group chats, and more Telegram/Feishu polish.
-- **2026-03-06** 🪄 Lighter providers, smarter media handling, and sturdier memory and CLI compatibility.
-- **2026-03-05** ⚡️ Telegram draft streaming, MCP SSE support, and broader channel reliability fixes.
-- **2026-03-04** 🛠️ Dependency cleanup, safer file reads, and another round of test and Cron fixes.
-- **2026-03-03** 🧠 Cleaner user-message merging, safer multimodal saves, and stronger Cron guards.
-- **2026-03-02** 🛡️ Safer default access control, sturdier Cron reloads, and cleaner Matrix media handling.
-- **2026-03-01** 🌐 Web proxy support, smarter Cron reminders, and Feishu rich-text parsing improvements.
-- **2026-02-28** 🚀 Released **v0.1.4.post3** — cleaner context, hardened session history, and smarter agent. Please see [release notes](https://github.com/HKUDS/nanobot/releases/tag/v0.1.4.post3) for details.
-- **2026-02-27** 🧠 Experimental thinking mode support, DingTalk media messages, Feishu and QQ channel fixes.
-- **2026-02-26** 🛡️ Session poisoning fix, WhatsApp dedup, Windows path guard, Mistral compatibility.
-- **2026-02-25** 🧹 New Matrix channel, cleaner session context, auto workspace template sync.
-- **2026-02-24** 🚀 Released **v0.1.4.post2** — a reliability-focused release with a redesigned heartbeat, prompt cache optimization, and hardened provider & channel stability. See [release notes](https://github.com/HKUDS/nanobot/releases/tag/v0.1.4.post2) for details.
-- **2026-02-23** 🔧 Virtual tool-call heartbeat, prompt cache optimization, Slack mrkdwn fixes.
-- **2026-02-22** 🛡️ Slack thread isolation, Discord typing fix, agent reliability improvements.
-- **2026-02-21** 🎉 Released **v0.1.4.post1** — new providers, media support across channels, and major stability improvements. See [release notes](https://github.com/HKUDS/nanobot/releases/tag/v0.1.4.post1) for details.
-- **2026-02-20** 🐦 Feishu now receives multimodal files from users. More reliable memory under the hood.
-- **2026-02-19** ✨ Slack now sends files, Discord splits long messages, and subagents work in CLI mode.
-- **2026-02-18** ⚡️ nanobot now supports VolcEngine, MCP custom auth headers, and Anthropic prompt caching.
-- **2026-02-17** 🎉 Released **v0.1.4** — MCP support, progress streaming, new providers, and multiple channel improvements. Please see [release notes](https://github.com/HKUDS/nanobot/releases/tag/v0.1.4) for details.
-- **2026-02-16** 🦞 nanobot now integrates a [ClawHub](https://clawhub.ai) skill — search and install public agent skills.
-- **2026-02-15** 🔑 nanobot now supports OpenAI Codex provider with OAuth login support.
-- **2026-02-14** 🔌 nanobot now supports MCP! See [MCP section](#mcp-model-context-protocol) for details.
-- **2026-02-13** 🎉 Released **v0.1.3.post7** — includes security hardening and multiple improvements. **Please upgrade to the latest version to address security issues**. See [release notes](https://github.com/HKUDS/nanobot/releases/tag/v0.1.3.post7) for more details.
-- **2026-02-12** 🧠 Redesigned memory system — Less code, more reliable. Join the [discussion](https://github.com/HKUDS/nanobot/discussions/566) about it!
-- **2026-02-11** ✨ Enhanced CLI experience and added MiniMax support!
-- **2026-02-10** 🎉 Released **v0.1.3.post6** with improvements! Check the updates [notes](https://github.com/HKUDS/nanobot/releases/tag/v0.1.3.post6) and our [roadmap](https://github.com/HKUDS/nanobot/discussions/431).
-- **2026-02-09** 💬 Added Slack, Email, and QQ support — nanobot now supports multiple chat platforms!
-- **2026-02-08** 🔧 Refactored Providers—adding a new LLM provider now takes just 2 simple steps! Check [here](#providers).
-- **2026-02-07** 🚀 Released **v0.1.3.post5** with Qwen support & several key improvements! Check [here](https://github.com/HKUDS/nanobot/releases/tag/v0.1.3.post5) for details.
-- **2026-02-06** ✨ Added Moonshot/Kimi provider, Discord integration, and enhanced security hardening!
-- **2026-02-05** ✨ Added Feishu channel, DeepSeek provider, and enhanced scheduled tasks support!
-- **2026-02-04** 🚀 Released **v0.1.3.post4** with multi-provider & Docker support! Check [here](https://github.com/HKUDS/nanobot/releases/tag/v0.1.3.post4) for details.
-- **2026-02-03** ⚡ Integrated vLLM for local LLM support and improved natural language task scheduling!
-- **2026-02-02** 🎉 nanobot officially launched! Welcome to try 🐈 nanobot!
-
-</details>
-
-> 🐈 nanobot is for educational, research, and technical exchange purposes only. It is unrelated to crypto and does not involve any official token or coin.
-
-## Key Features of nanobot:
+## Key Features of nano-grive:
 
 🪶 **Ultra-Lightweight**: A lightweight implementation built for stable, long-running AI agents.
 
@@ -107,13 +22,13 @@
 ## 🏗️ Architecture
 
 <p align="center">
-  <img src="nanobot_arch.png" alt="nanobot architecture" width="800">
+  <img src="nanobot_arch.png" alt="nano-grive architecture" width="800">
 </p>
 
 ## Table of Contents
 
 - [News](#-news)
-- [Key Features](#key-features-of-nanobot)
+- [Key Features](#key-features-of-nano-grive)
 - [Architecture](#️-architecture)
 - [Features](#-features)
 - [Install](#-install)
@@ -166,21 +81,21 @@
 **Install from source** (latest features, experimental changes may land here first; recommended for development)
 
 ```bash
-git clone https://github.com/HKUDS/nanobot.git
-cd nanobot
+git clone https://github.com/JesusGon98/Nano-Grive.git
+cd nano-grive
 pip install -e .
 ```
 
 **Install with [uv](https://github.com/astral-sh/uv)** (stable release, fast)
 
 ```bash
-uv tool install nanobot-ai
+uv tool install nano-grive
 ```
 
 **Install from PyPI** (stable release)
 
 ```bash
-pip install nanobot-ai
+pip install nano-grive
 ```
 
 ### Update to latest version
@@ -188,28 +103,28 @@ pip install nanobot-ai
 **PyPI / pip**
 
 ```bash
-pip install -U nanobot-ai
-nanobot --version
+pip install -U nano-grive
+nano-grive --version
 ```
 
 **uv**
 
 ```bash
-uv tool upgrade nanobot-ai
-nanobot --version
+uv tool upgrade nano-grive
+nano-grive --version
 ```
 
 **Using WhatsApp?** Rebuild the local bridge after upgrading:
 
 ```bash
-rm -rf ~/.nanobot/bridge
-nanobot channels login whatsapp
+rm -rf ~/.nano-grive/bridge
+nano-grive channels login whatsapp
 ```
 
 ## 🚀 Quick Start
 
 > [!TIP]
-> Set your API key in `~/.nanobot/config.json`.
+> Set your API key in `~/.nano-grive/config.json`.
 > Get API keys: [OpenRouter](https://openrouter.ai/keys) (Global)
 >
 > For other LLM providers, please see the [Providers](#providers) section.
@@ -219,12 +134,12 @@ nanobot channels login whatsapp
 **1. Initialize**
 
 ```bash
-nanobot onboard
+nano-grive onboard
 ```
 
-Use `nanobot onboard --wizard` if you want the interactive setup wizard.
+Use `nano-grive onboard --wizard` if you want the interactive setup wizard.
 
-**2. Configure** (`~/.nanobot/config.json`)
+**2. Configure** (`~/.nano-grive/config.json`)
 
 Configure these **two parts** in your config (other options have defaults).
 
@@ -254,21 +169,21 @@ Configure these **two parts** in your config (other options have defaults).
 **3. Chat**
 
 ```bash
-nanobot agent
+nano-grive agent
 ```
 
 That's it! You have a working AI agent in 2 minutes.
 
 ## 💬 Chat Apps
 
-Connect nanobot to your favorite chat platform. Want to build your own? See the [Channel Plugin Guide](./docs/CHANNEL_PLUGIN_GUIDE.md).
+Connect nano-grive to your favorite chat platform. Want to build your own? See the [Channel Plugin Guide](./docs/CHANNEL_PLUGIN_GUIDE.md).
 
 | Channel | What you need |
 |---------|---------------|
 | **Telegram** | Bot token from @BotFather |
 | **Discord** | Bot token + Message Content intent |
-| **WhatsApp** | QR code scan (`nanobot channels login whatsapp`) |
-| **WeChat (Weixin)** | QR code scan (`nanobot channels login weixin`) |
+| **WhatsApp** | QR code scan (`nano-grive channels login whatsapp`) |
+| **WeChat (Weixin)** | QR code scan (`nano-grive channels login weixin`) |
 | **Feishu** | App ID + App Secret |
 | **DingTalk** | App Key + App Secret |
 | **Slack** | Bot token + App-Level token |
@@ -307,7 +222,7 @@ Connect nanobot to your favorite chat platform. Want to build your own? See the 
 **3. Run**
 
 ```bash
-nanobot gateway
+nano-grive gateway
 ```
 
 </details>
@@ -317,30 +232,30 @@ nanobot gateway
 
 Uses **Socket.IO WebSocket** by default, with HTTP polling fallback.
 
-**1. Ask nanobot to set up Mochat for you**
+**1. Ask nano-grive to set up Mochat for you**
 
-Simply send this message to nanobot (replace `xxx@xxx` with your real email):
+Simply send this message to nano-grive (replace `xxx@xxx` with your real email):
 
 ```
-Read https://raw.githubusercontent.com/HKUDS/MoChat/refs/heads/main/skills/nanobot/skill.md and register on MoChat. My Email account is xxx@xxx Bind me as your owner and DM me on MoChat.
+Read https://github.com/JesusGon98/Nano-Grive and register on MoChat. My Email account is xxx@xxx Bind me as your owner and DM me on MoChat.
 ```
 
-nanobot will automatically register, configure `~/.nanobot/config.json`, and connect to Mochat.
+nano-grive will automatically register, configure `~/.nano-grive/config.json`, and connect to Mochat.
 
 **2. Restart gateway**
 
 ```bash
-nanobot gateway
+nano-grive gateway
 ```
 
-That's it — nanobot handles the rest!
+That's it — nano-grive handles the rest!
 
 <br>
 
 <details>
 <summary>Manual configuration (advanced)</summary>
 
-If you prefer to configure manually, add the following to `~/.nanobot/config.json`:
+If you prefer to configure manually, add the following to `~/.nano-grive/config.json`:
 
 > Keep `claw_token` private. It should only be sent in `X-Claw-Token` header to your Mochat API endpoint.
 
@@ -417,7 +332,7 @@ If you prefer to configure manually, add the following to `~/.nanobot/config.jso
 **6. Run**
 
 ```bash
-nanobot gateway
+nano-grive gateway
 ```
 
 </details>
@@ -428,7 +343,7 @@ nanobot gateway
 Install Matrix dependencies first:
 
 ```bash
-pip install nanobot-ai[matrix]
+pip install nano-grive[matrix]
 ```
 
 **1. Create/choose a Matrix account**
@@ -439,7 +354,7 @@ pip install nanobot-ai[matrix]
 **2. Get credentials**
 
 - You need:
-  - `userId` (example: `@nanobot:matrix.org`)
+  - `userId` (example: `@nano-grive:matrix.org`)
   - `password`
 
 (Note: `accessToken` and `deviceId` are still supported for legacy reasons, but
@@ -454,7 +369,7 @@ for reliable encryption, password login is recommended instead. If the
     "matrix": {
       "enabled": true,
       "homeserver": "https://matrix.org",
-      "userId": "@nanobot:matrix.org",
+      "userId": "@nano-grive:matrix.org",
       "password": "mypasswordhere",
       "e2eeEnabled": true,
       "allowFrom": ["@your_user:matrix.org"],
@@ -484,7 +399,7 @@ for reliable encryption, password login is recommended instead. If the
 **4. Run**
 
 ```bash
-nanobot gateway
+nano-grive gateway
 ```
 
 </details>
@@ -497,7 +412,7 @@ Requires **Node.js ≥18**.
 **1. Link device**
 
 ```bash
-nanobot channels login whatsapp
+nano-grive channels login whatsapp
 # Scan QR with WhatsApp → Settings → Linked Devices
 ```
 
@@ -518,15 +433,15 @@ nanobot channels login whatsapp
 
 ```bash
 # Terminal 1
-nanobot channels login whatsapp
+nano-grive channels login whatsapp
 
 # Terminal 2
-nanobot gateway
+nano-grive gateway
 ```
 
 > WhatsApp bridge updates are not applied automatically for existing installations.
-> After upgrading nanobot, rebuild the local bridge with:
-> `rm -rf ~/.nanobot/bridge && nanobot channels login whatsapp`
+> After upgrading nano-grive, rebuild the local bridge with:
+> `rm -rf ~/.nano-grive/bridge && nano-grive channels login whatsapp`
 
 </details>
 
@@ -540,10 +455,10 @@ Uses **WebSocket** long connection — no public IP required.
 - Create a new app → Enable **Bot** capability
 - **Permissions**:
   - `im:message` (send messages) and `im:message.p2p_msg:readonly` (receive messages)
-  - **Streaming replies** (default in nanobot): add **`cardkit:card:write`** (often labeled **Create and update cards** in the Feishu developer console). Required for CardKit entities and streamed assistant text. Older apps may not have it yet — open **Permission management**, enable the scope, then **publish** a new app version if the console requires it.
+  - **Streaming replies** (default in nano-grive): add **`cardkit:card:write`** (often labeled **Create and update cards** in the Feishu developer console). Required for CardKit entities and streamed assistant text. Older apps may not have it yet — open **Permission management**, enable the scope, then **publish** a new app version if the console requires it.
   - If you **cannot** add `cardkit:card:write`, set `"streaming": false` under `channels.feishu` (see below). The bot still works; replies use normal interactive cards without token-by-token streaming.
 - **Events**: Add `im.message.receive_v1` (receive messages)
-  - Select **Long Connection** mode (requires running nanobot first to establish connection)
+  - Select **Long Connection** mode (requires running nano-grive first to establish connection)
 - Get **App ID** and **App Secret** from "Credentials & Basic Info"
 - Publish the app
 
@@ -568,13 +483,13 @@ Uses **WebSocket** long connection — no public IP required.
 
 > `streaming` defaults to `true`. Use `false` if your app does not have **`cardkit:card:write`** (see permissions above).
 > `encryptKey` and `verificationToken` are optional for Long Connection mode.
-> `allowFrom`: Add your open_id (find it in nanobot logs when you message the bot). Use `["*"]` to allow all users.
+> `allowFrom`: Add your open_id (find it in nano-grive logs when you message the bot). Use `["*"]` to allow all users.
 > `groupPolicy`: `"mention"` (default — respond only when @mentioned), `"open"` (respond to all group messages). Private chats always respond.
 
 **3. Run**
 
 ```bash
-nanobot gateway
+nano-grive gateway
 ```
 
 > [!TIP]
@@ -599,7 +514,7 @@ Uses **botpy SDK** with WebSocket — no public IP required. Currently supports 
 
 **3. Configure**
 
-> - `allowFrom`: Add your openid (find it in nanobot logs when you message the bot). Use `["*"]` for public access.
+> - `allowFrom`: Add your openid (find it in nano-grive logs when you message the bot). Use `["*"]` for public access.
 > - `msgFormat`: Optional. Use `"plain"` (default) for maximum compatibility with legacy QQ clients, or `"markdown"` for richer formatting on newer clients.
 > - For production: submit a review in the bot console and publish. See [QQ Bot Docs](https://bot.q.qq.com/wiki/) for the full publishing flow.
 
@@ -620,7 +535,7 @@ Uses **botpy SDK** with WebSocket — no public IP required. Currently supports 
 **4. Run**
 
 ```bash
-nanobot gateway
+nano-grive gateway
 ```
 
 Now send a message to the bot from QQ — it should respond!
@@ -661,7 +576,7 @@ Uses **Stream Mode** — no public IP required.
 **3. Run**
 
 ```bash
-nanobot gateway
+nano-grive gateway
 ```
 
 </details>
@@ -682,7 +597,7 @@ Uses **Socket Mode** — no public URL required.
 - **App Home**: Scroll to **Show Tabs** → Enable **Messages Tab** → Check **"Allow users to send Slash commands and messages from the messages tab"**
 - **Install App**: Click **Install to Workspace** → Authorize → copy the **Bot Token** (`xoxb-...`)
 
-**3. Configure nanobot**
+**3. Configure nano-grive**
 
 ```json
 {
@@ -701,7 +616,7 @@ Uses **Socket Mode** — no public URL required.
 **4. Run**
 
 ```bash
-nanobot gateway
+nano-grive gateway
 ```
 
 DM the bot directly or @mention it in a channel — it should respond!
@@ -715,10 +630,10 @@ DM the bot directly or @mention it in a channel — it should respond!
 <details>
 <summary><b>Email</b></summary>
 
-Give nanobot its own email account. It polls **IMAP** for incoming mail and replies via **SMTP** — like a personal email assistant.
+Give nano-grive its own email account. It polls **IMAP** for incoming mail and replies via **SMTP** — like a personal email assistant.
 
 **1. Get credentials (Gmail example)**
-- Create a dedicated Gmail account for your bot (e.g. `my-nanobot@gmail.com`)
+- Create a dedicated Gmail account for your bot (e.g. `my-nano-grive@gmail.com`)
 - Enable 2-Step Verification → Create an [App Password](https://myaccount.google.com/apppasswords)
 - Use this app password for both IMAP and SMTP
 
@@ -740,13 +655,13 @@ Give nanobot its own email account. It polls **IMAP** for incoming mail and repl
       "consentGranted": true,
       "imapHost": "imap.gmail.com",
       "imapPort": 993,
-      "imapUsername": "my-nanobot@gmail.com",
+      "imapUsername": "my-nano-grive@gmail.com",
       "imapPassword": "your-app-password",
       "smtpHost": "smtp.gmail.com",
       "smtpPort": 587,
-      "smtpUsername": "my-nanobot@gmail.com",
+      "smtpUsername": "my-nano-grive@gmail.com",
       "smtpPassword": "your-app-password",
-      "fromAddress": "my-nanobot@gmail.com",
+      "fromAddress": "my-nano-grive@gmail.com",
       "allowFrom": ["your-real-email@gmail.com"],
       "allowedAttachmentTypes": ["application/pdf", "image/*"]
     }
@@ -758,7 +673,7 @@ Give nanobot its own email account. It polls **IMAP** for incoming mail and repl
 **3. Run**
 
 ```bash
-nanobot gateway
+nano-grive gateway
 ```
 
 </details>
@@ -771,7 +686,7 @@ Uses **HTTP long-poll** with QR-code login via the ilinkai personal WeChat API. 
 **1. Install with WeChat support**
 
 ```bash
-pip install "nanobot-ai[weixin]"
+pip install "nano-grive[weixin]"
 ```
 
 **2. Configure**
@@ -787,28 +702,28 @@ pip install "nanobot-ai[weixin]"
 }
 ```
 
-> - `allowFrom`: Add the sender ID you see in nanobot logs for your WeChat account. Use `["*"]` to allow all users.
-> - `token`: Optional. If omitted, log in interactively and nanobot will save the token for you.
-> - `routeTag`: Optional. When your upstream Weixin deployment requires request routing, nanobot will send it as the `SKRouteTag` header.
-> - `stateDir`: Optional. Defaults to nanobot's runtime directory for Weixin state.
+> - `allowFrom`: Add the sender ID you see in nano-grive logs for your WeChat account. Use `["*"]` to allow all users.
+> - `token`: Optional. If omitted, log in interactively and nano-grive will save the token for you.
+> - `routeTag`: Optional. When your upstream Weixin deployment requires request routing, nano-grive will send it as the `SKRouteTag` header.
+> - `stateDir`: Optional. Defaults to nano-grive's runtime directory for Weixin state.
 > - `pollTimeout`: Optional long-poll timeout in seconds.
 
 **3. Login**
 
 ```bash
-nanobot channels login weixin
+nano-grive channels login weixin
 ```
 
 Use `--force` to re-authenticate and ignore any saved token:
 
 ```bash
-nanobot channels login weixin --force
+nano-grive channels login weixin --force
 ```
 
 **4. Run**
 
 ```bash
-nanobot gateway
+nano-grive gateway
 ```
 
 </details>
@@ -823,7 +738,7 @@ nanobot gateway
 **1. Install the optional dependency**
 
 ```bash
-pip install nanobot-ai[wecom]
+pip install nano-grive[wecom]
 ```
 
 **2. Create a WeCom AI Bot**
@@ -848,30 +763,30 @@ Go to the WeCom admin console → Intelligent Robot → Create Robot → select 
 **4. Run**
 
 ```bash
-nanobot gateway
+nano-grive gateway
 ```
 
 </details>
 
 ## 🌐 Agent Social Network
 
-🐈 nanobot is capable of linking to the agent social network (agent community). **Just send one message and your nanobot joins automatically!**
+🐈 nano-grive is capable of linking to the agent social network (agent community). **Just send one message and your nano-grive joins automatically!**
 
 | Platform | How to Join (send this message to your bot) |
 |----------|-------------|
 | [**Moltbook**](https://www.moltbook.com/) | `Read https://moltbook.com/skill.md and follow the instructions to join Moltbook` |
 | [**ClawdChat**](https://clawdchat.ai/) | `Read https://clawdchat.ai/skill.md and follow the instructions to join ClawdChat` |
 
-Simply send the command above to your nanobot (via CLI or any chat channel), and it will handle the rest.
+Simply send the command above to your nano-grive (via CLI or any chat channel), and it will handle the rest.
 
 ## ⚙️ Configuration
 
-Config file: `~/.nanobot/config.json`
+Config file: `~/.nano-grive/config.json`
 
 > [!NOTE]
 > If your config file is older than the current schema, you can refresh it without overwriting your existing values:
-> run `nanobot onboard`, then answer `N` when asked whether to overwrite the config.
-> nanobot will merge in missing default fields and keep your current settings.
+> run `nano-grive onboard`, then answer `N` when asked whether to overwrite the config.
+> nano-grive will merge in missing default fields and keep your current settings.
 
 ### Environment Variables for Secrets
 
@@ -895,10 +810,10 @@ Instead of storing secrets directly in `config.json`, you can use `${VAR_NAME}` 
 For **systemd** deployments, use `EnvironmentFile=` in the service unit to load variables from a file that only the deploying user can read:
 
 ```ini
-# /etc/systemd/system/nanobot.service (excerpt)
+# /etc/systemd/system/nano-grive.service (excerpt)
 [Service]
 EnvironmentFile=/home/youruser/nanobot_secrets.env
-User=nanobot
+User=nano-grive
 ExecStart=...
 ```
 
@@ -912,7 +827,7 @@ IMAP_PASSWORD=your-password-here
 
 > [!TIP]
 > - **Voice transcription**: Voice messages (Telegram, WhatsApp) are automatically transcribed using Whisper. By default Groq is used (free tier). Set `"transcriptionProvider": "openai"` under `channels` to use OpenAI Whisper instead — the API key is picked from the matching provider config.
-> - **MiniMax Coding Plan**: Exclusive discount links for the nanobot community: [Overseas](https://platform.minimax.io/subscribe/coding-plan?code=9txpdXw04g&source=link) · [Mainland China](https://platform.minimaxi.com/subscribe/token-plan?code=GILTJpMTqZ&source=link)
+> - **MiniMax Coding Plan**: Exclusive discount links for the nano-grive community: [Overseas](https://platform.minimax.io/subscribe/coding-plan?code=9txpdXw04g&source=link) · [Mainland China](https://platform.minimaxi.com/subscribe/token-plan?code=GILTJpMTqZ&source=link)
 > - **MiniMax (Mainland China)**: If your API key is from MiniMax's mainland China platform (minimaxi.com), set `"apiBase": "https://api.minimaxi.com/v1"` in your minimax provider config.
 > - **VolcEngine / BytePlus Coding Plan**: Use dedicated providers `volcengineCodingPlan` or `byteplusCodingPlan` instead of the pay-per-use `volcengine` / `byteplus` providers.
 > - **Zhipu Coding Plan**: If you're on Zhipu's coding plan, set `"apiBase": "https://open.bigmodel.cn/api/coding/paas/v4"` in your zhipu provider config.
@@ -923,8 +838,8 @@ IMAP_PASSWORD=your-password-here
 |----------|---------|-------------|
 | `custom` | Any OpenAI-compatible endpoint | — |
 | `openrouter` | LLM (recommended, access to all models) | [openrouter.ai](https://openrouter.ai) |
-| `volcengine` | LLM (VolcEngine, pay-per-use) | [Coding Plan](https://www.volcengine.com/activity/codingplan?utm_campaign=nanobot&utm_content=nanobot&utm_medium=devrel&utm_source=OWO&utm_term=nanobot) · [volcengine.com](https://www.volcengine.com) |
-| `byteplus` | LLM (VolcEngine international, pay-per-use) | [Coding Plan](https://www.byteplus.com/en/activity/codingplan?utm_campaign=nanobot&utm_content=nanobot&utm_medium=devrel&utm_source=OWO&utm_term=nanobot) · [byteplus.com](https://www.byteplus.com) |
+| `volcengine` | LLM (VolcEngine, pay-per-use) | [Coding Plan](https://www.volcengine.com/activity/codingplan?utm_campaign=nano-grive&utm_content=nano-grive&utm_medium=devrel&utm_source=OWO&utm_term=nano-grive) · [volcengine.com](https://www.volcengine.com) |
+| `byteplus` | LLM (VolcEngine international, pay-per-use) | [Coding Plan](https://www.byteplus.com/en/activity/codingplan?utm_campaign=nano-grive&utm_content=nano-grive&utm_medium=devrel&utm_source=OWO&utm_term=nano-grive) · [byteplus.com](https://www.byteplus.com) |
 | `anthropic` | LLM (Claude direct) | [console.anthropic.com](https://console.anthropic.com) |
 | `azure_openai` | LLM (Azure OpenAI) | [portal.azure.com](https://portal.azure.com) |
 | `openai` | LLM + Voice transcription (Whisper) | [platform.openai.com](https://platform.openai.com) |
@@ -943,8 +858,8 @@ IMAP_PASSWORD=your-password-here
 | `stepfun` | LLM (Step Fun/阶跃星辰) | [platform.stepfun.com](https://platform.stepfun.com) |
 | `ovms` | LLM (local, OpenVINO Model Server) | [docs.openvino.ai](https://docs.openvino.ai/2026/model-server/ovms_docs_llm_quickstart.html) |
 | `vllm` | LLM (local, any OpenAI-compatible server) | — |
-| `openai_codex` | LLM (Codex, OAuth) | `nanobot provider login openai-codex` |
-| `github_copilot` | LLM (GitHub Copilot, OAuth) | `nanobot provider login github-copilot` |
+| `openai_codex` | LLM (Codex, OAuth) | `nano-grive provider login openai-codex` |
+| `github_copilot` | LLM (GitHub Copilot, OAuth) | `nano-grive provider login github-copilot` |
 | `qianfan` | LLM (Baidu Qianfan) | [cloud.baidu.com](https://cloud.baidu.com/doc/qianfan/s/Hmh4suq26) |
 
 
@@ -952,14 +867,14 @@ IMAP_PASSWORD=your-password-here
 <summary><b>OpenAI Codex (OAuth)</b></summary>
 
 Codex uses OAuth instead of API keys. Requires a ChatGPT Plus or Pro account.
-No `providers.openaiCodex` block is needed in `config.json`; `nanobot provider login` stores the OAuth session outside config.
+No `providers.openaiCodex` block is needed in `config.json`; `nano-grive provider login` stores the OAuth session outside config.
 
 **1. Login:**
 ```bash
-nanobot provider login openai-codex
+nano-grive provider login openai-codex
 ```
 
-**2. Set model** (merge into `~/.nanobot/config.json`):
+**2. Set model** (merge into `~/.nano-grive/config.json`):
 ```json
 {
   "agents": {
@@ -972,13 +887,13 @@ nanobot provider login openai-codex
 
 **3. Chat:**
 ```bash
-nanobot agent -m "Hello!"
+nano-grive agent -m "Hello!"
 
 # Target a specific workspace/config locally
-nanobot agent -c ~/.nanobot-telegram/config.json -m "Hello!"
+nano-grive agent -c ~/.nano-grive-telegram/config.json -m "Hello!"
 
 # One-off workspace override on top of that config
-nanobot agent -c ~/.nanobot-telegram/config.json -w /tmp/nanobot-telegram-test -m "Hello!"
+nano-grive agent -c ~/.nano-grive-telegram/config.json -w /tmp/nano-grive-telegram-test -m "Hello!"
 ```
 
 > Docker users: use `docker run -it` for interactive OAuth login.
@@ -990,14 +905,14 @@ nanobot agent -c ~/.nanobot-telegram/config.json -w /tmp/nanobot-telegram-test -
 <summary><b>GitHub Copilot (OAuth)</b></summary>
 
 GitHub Copilot uses OAuth instead of API keys. Requires a [GitHub account with a plan](https://github.com/features/copilot/plans) configured.
-No `providers.githubCopilot` block is needed in `config.json`; `nanobot provider login` stores the OAuth session outside config.
+No `providers.githubCopilot` block is needed in `config.json`; `nano-grive provider login` stores the OAuth session outside config.
 
 **1. Login:**
 ```bash
-nanobot provider login github-copilot
+nano-grive provider login github-copilot
 ```
 
-**2. Set model** (merge into `~/.nanobot/config.json`):
+**2. Set model** (merge into `~/.nano-grive/config.json`):
 ```json
 {
   "agents": {
@@ -1010,13 +925,13 @@ nanobot provider login github-copilot
 
 **3. Chat:**
 ```bash
-nanobot agent -m "Hello!"
+nano-grive agent -m "Hello!"
 
 # Target a specific workspace/config locally
-nanobot agent -c ~/.nanobot-telegram/config.json -m "Hello!"
+nano-grive agent -c ~/.nano-grive-telegram/config.json -m "Hello!"
 
 # One-off workspace override on top of that config
-nanobot agent -c ~/.nanobot-telegram/config.json -w /tmp/nanobot-telegram-test -m "Hello!"
+nano-grive agent -c ~/.nano-grive-telegram/config.json -w /tmp/nano-grive-telegram-test -m "Hello!"
 ```
 
 > Docker users: use `docker run -it` for interactive OAuth login.
@@ -1058,7 +973,7 @@ Run a local model with Ollama, then add to config:
 ollama run llama3.2
 ```
 
-**2. Add to config** (partial — merge into `~/.nanobot/config.json`):
+**2. Add to config** (partial — merge into `~/.nano-grive/config.json`):
 ```json
 {
   "providers": {
@@ -1132,7 +1047,7 @@ docker run -d \
   --target_device GPU
 ```
 
-**3. Add to config** (partial — merge into `~/.nanobot/config.json`):
+**3. Add to config** (partial — merge into `~/.nano-grive/config.json`):
 
 ```json
 {
@@ -1164,7 +1079,7 @@ Run your own model with vLLM or any OpenAI-compatible server, then add to config
 vllm serve meta-llama/Llama-3.1-8B-Instruct --port 8000
 ```
 
-**2. Add to config** (partial — merge into `~/.nanobot/config.json`):
+**2. Add to config** (partial — merge into `~/.nano-grive/config.json`):
 
 *Provider (key can be any non-empty string for local):*
 ```json
@@ -1194,22 +1109,22 @@ vllm serve meta-llama/Llama-3.1-8B-Instruct --port 8000
 <details>
 <summary><b>Adding a New Provider (Developer Guide)</b></summary>
 
-nanobot uses a **Provider Registry** (`nanobot/providers/registry.py`) as the single source of truth.
+nano-grive uses a **Provider Registry** (`nano-grive/providers/registry.py`) as the single source of truth.
 Adding a new provider only takes **2 steps** — no if-elif chains to touch.
 
-**Step 1.** Add a `ProviderSpec` entry to `PROVIDERS` in `nanobot/providers/registry.py`:
+**Step 1.** Add a `ProviderSpec` entry to `PROVIDERS` in `nano-grive/providers/registry.py`:
 
 ```python
 ProviderSpec(
     name="myprovider",                   # config field name
     keywords=("myprovider", "mymodel"),  # model-name keywords for auto-matching
     env_key="MYPROVIDER_API_KEY",        # env var name
-    display_name="My Provider",          # shown in `nanobot status`
+    display_name="My Provider",          # shown in `nano-grive status`
     default_api_base="https://api.myprovider.com/v1",  # OpenAI-compatible endpoint
 )
 ```
 
-**Step 2.** Add a field to `ProvidersConfig` in `nanobot/config/schema.py`:
+**Step 2.** Add a field to `ProvidersConfig` in `nano-grive/config/schema.py`:
 
 ```python
 class ProvidersConfig(BaseModel):
@@ -1217,7 +1132,7 @@ class ProvidersConfig(BaseModel):
     myprovider: ProviderConfig = ProviderConfig()
 ```
 
-That's it! Environment variables, model routing, config matching, and `nanobot status` display will all work automatically.
+That's it! Environment variables, model routing, config matching, and `nano-grive status` display will all work automatically.
 
 **Common `ProviderSpec` options:**
 
@@ -1236,7 +1151,7 @@ That's it! Environment variables, model routing, config matching, and `nanobot s
 
 ### Channel Settings
 
-Global settings that apply to all channels. Configure under the `channels` section in `~/.nanobot/config.json`:
+Global settings that apply to all channels. Configure under the `channels` section in `~/.nano-grive/config.json`:
 
 ```json
 {
@@ -1261,7 +1176,7 @@ Global settings that apply to all channels. Configure under the `channels` secti
 
 Retry is intentionally simple.
 
-When a channel `send()` raises, nanobot retries at the channel-manager layer. By default, `channels.sendMaxRetries` is `3`, and that count includes the initial send.
+When a channel `send()` raises, nano-grive retries at the channel-manager layer. By default, `channels.sendMaxRetries` is `3`, and that count includes the initial send.
 
 - **Attempt 1**: Send immediately
 - **Attempt 2**: Retry after `1s`
@@ -1275,7 +1190,7 @@ When a channel `send()` raises, nanobot retries at the channel-manager layer. By
 >
 > Some channels may still apply small API-specific retries internally. For example, Telegram separately retries timeout and flood-control errors before surfacing a final failure to the manager.
 >
-> If a channel is completely unreachable, nanobot cannot notify the user through that same channel. Watch logs for `Failed to send to {channel} after N attempts` to spot persistent delivery failures.
+> If a channel is completely unreachable, nano-grive cannot notify the user through that same channel. Watch logs for `Failed to send to {channel} after N attempts` to spot persistent delivery failures.
 
 ### Web Search
 
@@ -1285,7 +1200,7 @@ When a channel `send()` raises, nanobot retries at the channel-manager layer. By
 > { "tools": { "web": { "proxy": "http://127.0.0.1:7890" } } }
 > ```
 
-nanobot supports multiple web search providers. Configure in `~/.nanobot/config.json` under `tools.web.search`.
+nano-grive supports multiple web search providers. Configure in `~/.nano-grive/config.json` under `tools.web.search`.
 
 By default, web tools are enabled and web search uses `duckduckgo`, so search works out of the box without an API key.
 
@@ -1408,7 +1323,7 @@ If you need to allow trusted private ranges such as Tailscale / CGNAT addresses,
 > [!TIP]
 > The config format is compatible with Claude Desktop / Cursor. You can copy MCP server configs directly from any MCP server's README.
 
-nanobot supports [MCP](https://modelcontextprotocol.io/) — connect external tool servers and use them as native agent tools.
+nano-grive supports [MCP](https://modelcontextprotocol.io/) — connect external tool servers and use them as native agent tools.
 
 Add MCP servers to your `config.json`:
 
@@ -1469,7 +1384,7 @@ Use `enabledTools` to register only a subset of tools from an MCP server:
 }
 ```
 
-`enabledTools` accepts either the raw MCP tool name (for example `read_file`) or the wrapped nanobot tool name (for example `mcp_filesystem_write_file`).
+`enabledTools` accepts either the raw MCP tool name (for example `read_file`) or the wrapped nano-grive tool name (for example `mcp_filesystem_write_file`).
 
 - Omit `enabledTools`, or set it to `["*"]`, to register all tools.
 - Set `enabledTools` to `[]` to register no tools from that server.
@@ -1494,14 +1409,14 @@ MCP tools are automatically discovered and registered on startup. The LLM can us
 | `tools.exec.pathAppend` | `""` | Extra directories to append to `PATH` when running shell commands (e.g. `/usr/sbin` for `ufw`). |
 | `channels.*.allowFrom` | `[]` (deny all) | Whitelist of user IDs. Empty denies all; use `["*"]` to allow everyone. |
 
-**Docker security**: The official Docker image runs as a non-root user (`nanobot`, UID 1000) with bubblewrap pre-installed. When using `docker-compose.yml`, the container drops all Linux capabilities except `SYS_ADMIN` (required for bwrap's namespace isolation).
+**Docker security**: The official Docker image runs as a non-root user (`nano-grive`, UID 1000) with bubblewrap pre-installed. When using `docker-compose.yml`, the container drops all Linux capabilities except `SYS_ADMIN` (required for bwrap's namespace isolation).
 
 
 ### Timezone
 
 Time is context. Context should be precise.
 
-By default, nanobot uses `UTC` for runtime time context. If you want the agent to think in your local time, set `agents.defaults.timezone` to a valid [IANA timezone name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones):
+By default, nano-grive uses `UTC` for runtime time context. If you want the agent to think in your local time, set `agents.defaults.timezone` to a valid [IANA timezone name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones):
 
 ```json
 {
@@ -1521,7 +1436,7 @@ Common examples: `UTC`, `America/New_York`, `America/Los_Angeles`, `Europe/Londo
 
 ### Unified Session
 
-By default, each channel × chat ID combination gets its own session. If you use nanobot across multiple channels (e.g. Telegram + Discord + CLI) and want them to share the same conversation, enable `unifiedSession`:
+By default, each channel × chat ID combination gets its own session. If you use nano-grive across multiple channels (e.g. Telegram + Discord + CLI) and want them to share the same conversation, enable `unifiedSession`:
 
 ```json
 {
@@ -1547,7 +1462,7 @@ When enabled, all incoming messages — regardless of which channel they arrive 
 
 ## 🧩 Multiple Instances
 
-Run multiple nanobot instances simultaneously with separate configs and runtime data. Use `--config` as the main entrypoint. Optionally pass `--workspace` during `onboard` when you want to initialize or update the saved workspace for a specific instance.
+Run multiple nano-grive instances simultaneously with separate configs and runtime data. Use `--config` as the main entrypoint. Optionally pass `--workspace` during `onboard` when you want to initialize or update the saved workspace for a specific instance.
 
 ### Quick Start
 
@@ -1557,50 +1472,50 @@ If you want each instance to have its own dedicated workspace from the start, pa
 
 ```bash
 # Create separate instance configs and workspaces
-nanobot onboard --config ~/.nanobot-telegram/config.json --workspace ~/.nanobot-telegram/workspace
-nanobot onboard --config ~/.nanobot-discord/config.json --workspace ~/.nanobot-discord/workspace
-nanobot onboard --config ~/.nanobot-feishu/config.json --workspace ~/.nanobot-feishu/workspace
+nano-grive onboard --config ~/.nano-grive-telegram/config.json --workspace ~/.nano-grive-telegram/workspace
+nano-grive onboard --config ~/.nano-grive-discord/config.json --workspace ~/.nano-grive-discord/workspace
+nano-grive onboard --config ~/.nano-grive-feishu/config.json --workspace ~/.nano-grive-feishu/workspace
 ```
 
 **Configure each instance:**
 
-Edit `~/.nanobot-telegram/config.json`, `~/.nanobot-discord/config.json`, etc. with different channel settings. The workspace you passed during `onboard` is saved into each config as that instance's default workspace.
+Edit `~/.nano-grive-telegram/config.json`, `~/.nano-grive-discord/config.json`, etc. with different channel settings. The workspace you passed during `onboard` is saved into each config as that instance's default workspace.
 
 **Run instances:**
 
 ```bash
 # Instance A - Telegram bot
-nanobot gateway --config ~/.nanobot-telegram/config.json
+nano-grive gateway --config ~/.nano-grive-telegram/config.json
 
 # Instance B - Discord bot  
-nanobot gateway --config ~/.nanobot-discord/config.json
+nano-grive gateway --config ~/.nano-grive-discord/config.json
 
 # Instance C - Feishu bot with custom port
-nanobot gateway --config ~/.nanobot-feishu/config.json --port 18792
+nano-grive gateway --config ~/.nano-grive-feishu/config.json --port 18792
 ```
 
 ### Path Resolution
 
-When using `--config`, nanobot derives its runtime data directory from the config file location. The workspace still comes from `agents.defaults.workspace` unless you override it with `--workspace`.
+When using `--config`, nano-grive derives its runtime data directory from the config file location. The workspace still comes from `agents.defaults.workspace` unless you override it with `--workspace`.
 
 To open a CLI session against one of these instances locally:
 
 ```bash
-nanobot agent -c ~/.nanobot-telegram/config.json -m "Hello from Telegram instance"
-nanobot agent -c ~/.nanobot-discord/config.json -m "Hello from Discord instance"
+nano-grive agent -c ~/.nano-grive-telegram/config.json -m "Hello from Telegram instance"
+nano-grive agent -c ~/.nano-grive-discord/config.json -m "Hello from Discord instance"
 
 # Optional one-off workspace override
-nanobot agent -c ~/.nanobot-telegram/config.json -w /tmp/nanobot-telegram-test
+nano-grive agent -c ~/.nano-grive-telegram/config.json -w /tmp/nano-grive-telegram-test
 ```
 
-> `nanobot agent` starts a local CLI agent using the selected workspace/config. It does not attach to or proxy through an already running `nanobot gateway` process.
+> `nano-grive agent` starts a local CLI agent using the selected workspace/config. It does not attach to or proxy through an already running `nano-grive gateway` process.
 
 | Component | Resolved From | Example |
 |-----------|---------------|---------|
-| **Config** | `--config` path | `~/.nanobot-A/config.json` |
-| **Workspace** | `--workspace` or config | `~/.nanobot-A/workspace/` |
-| **Cron Jobs** | config directory | `~/.nanobot-A/cron/` |
-| **Media / runtime state** | config directory | `~/.nanobot-A/media/` |
+| **Config** | `--config` path | `~/.nano-grive-A/config.json` |
+| **Workspace** | `--workspace` or config | `~/.nano-grive-A/workspace/` |
+| **Cron Jobs** | config directory | `~/.nano-grive-A/cron/` |
+| **Media / runtime state** | config directory | `~/.nano-grive-A/media/` |
 
 ### How It Works
 
@@ -1620,7 +1535,7 @@ Example config:
 {
   "agents": {
     "defaults": {
-      "workspace": "~/.nanobot-telegram/workspace",
+      "workspace": "~/.nano-grive-telegram/workspace",
       "model": "anthropic/claude-sonnet-4-6"
     }
   },
@@ -1639,14 +1554,14 @@ Example config:
 Start separate instances:
 
 ```bash
-nanobot gateway --config ~/.nanobot-telegram/config.json
-nanobot gateway --config ~/.nanobot-discord/config.json
+nano-grive gateway --config ~/.nano-grive-telegram/config.json
+nano-grive gateway --config ~/.nano-grive-discord/config.json
 ```
 
 Override workspace for one-off runs when needed:
 
 ```bash
-nanobot gateway --config ~/.nanobot-telegram/config.json --workspace /tmp/nanobot-telegram-test
+nano-grive gateway --config ~/.nano-grive-telegram/config.json --workspace /tmp/nano-grive-telegram-test
 ```
 
 ### Common Use Cases
@@ -1665,7 +1580,7 @@ nanobot gateway --config ~/.nanobot-telegram/config.json --workspace /tmp/nanobo
 
 ## 🧠 Memory
 
-nanobot uses a layered memory system designed to stay light in the moment and durable over
+nano-grive uses a layered memory system designed to stay light in the moment and durable over
 time.
 
 - `memory/history.jsonl` stores append-only summarized history
@@ -1679,21 +1594,21 @@ If you want the full design, see [docs/MEMORY.md](docs/MEMORY.md).
 
 | Command | Description |
 |---------|-------------|
-| `nanobot onboard` | Initialize config & workspace at `~/.nanobot/` |
-| `nanobot onboard --wizard` | Launch the interactive onboarding wizard |
-| `nanobot onboard -c <config> -w <workspace>` | Initialize or refresh a specific instance config and workspace |
-| `nanobot agent -m "..."` | Chat with the agent |
-| `nanobot agent -w <workspace>` | Chat against a specific workspace |
-| `nanobot agent -w <workspace> -c <config>` | Chat against a specific workspace/config |
-| `nanobot agent` | Interactive chat mode |
-| `nanobot agent --no-markdown` | Show plain-text replies |
-| `nanobot agent --logs` | Show runtime logs during chat |
-| `nanobot serve` | Start the OpenAI-compatible API |
-| `nanobot gateway` | Start the gateway |
-| `nanobot status` | Show status |
-| `nanobot provider login openai-codex` | OAuth login for providers |
-| `nanobot channels login <channel>` | Authenticate a channel interactively |
-| `nanobot channels status` | Show channel status |
+| `nano-grive onboard` | Initialize config & workspace at `~/.nano-grive/` |
+| `nano-grive onboard --wizard` | Launch the interactive onboarding wizard |
+| `nano-grive onboard -c <config> -w <workspace>` | Initialize or refresh a specific instance config and workspace |
+| `nano-grive agent -m "..."` | Chat with the agent |
+| `nano-grive agent -w <workspace>` | Chat against a specific workspace |
+| `nano-grive agent -w <workspace> -c <config>` | Chat against a specific workspace/config |
+| `nano-grive agent` | Interactive chat mode |
+| `nano-grive agent --no-markdown` | Show plain-text replies |
+| `nano-grive agent --logs` | Show runtime logs during chat |
+| `nano-grive serve` | Start the OpenAI-compatible API |
+| `nano-grive gateway` | Start the gateway |
+| `nano-grive status` | Show status |
+| `nano-grive provider login openai-codex` | OAuth login for providers |
+| `nano-grive channels login <channel>` | Authenticate a channel interactively |
+| `nano-grive channels status` | Show channel status |
 
 Interactive mode exits: `exit`, `quit`, `/exit`, `/quit`, `:q`, or `Ctrl+D`.
 
@@ -1717,9 +1632,9 @@ These commands work inside chat channels and interactive agent sessions:
 <details>
 <summary><b>Heartbeat (Periodic Tasks)</b></summary>
 
-The gateway wakes up every 30 minutes and checks `HEARTBEAT.md` in your workspace (`~/.nanobot/workspace/HEARTBEAT.md`). If the file has tasks, the agent executes them and delivers results to your most recently active chat channel.
+The gateway wakes up every 30 minutes and checks `HEARTBEAT.md` in your workspace (`~/.nano-grive/workspace/HEARTBEAT.md`). If the file has tasks, the agent executes them and delivers results to your most recently active chat channel.
 
-**Setup:** edit `~/.nanobot/workspace/HEARTBEAT.md` (created automatically by `nanobot onboard`):
+**Setup:** edit `~/.nano-grive/workspace/HEARTBEAT.md` (created automatically by `nano-grive onboard`):
 
 ```markdown
 ## Periodic Tasks
@@ -1730,16 +1645,16 @@ The gateway wakes up every 30 minutes and checks `HEARTBEAT.md` in your workspac
 
 The agent can also manage this file itself — ask it to "add a periodic task" and it will update `HEARTBEAT.md` for you.
 
-> **Note:** The gateway must be running (`nanobot gateway`) and you must have chatted with the bot at least once so it knows which channel to deliver to.
+> **Note:** The gateway must be running (`nano-grive gateway`) and you must have chatted with the bot at least once so it knows which channel to deliver to.
 
 </details>
 
 ## 🐍 Python SDK
 
-Use nanobot as a library — no CLI, no gateway, just Python:
+Use nano-grive as a library — no CLI, no gateway, just Python:
 
 ```python
-from nanobot import Nanobot
+from nano-grive import Nanobot
 
 bot = Nanobot.from_config()
 result = await bot.run("Summarize the README")
@@ -1756,7 +1671,7 @@ await bot.run("hi", session_key="task-42")
 Add lifecycle hooks to observe or customize the agent:
 
 ```python
-from nanobot.agent import AgentHook, AgentHookContext
+from nano-grive.agent import AgentHook, AgentHookContext
 
 class AuditHook(AgentHook):
     async def before_execute_tools(self, ctx: AgentHookContext) -> None:
@@ -1770,11 +1685,11 @@ See [docs/PYTHON_SDK.md](docs/PYTHON_SDK.md) for the full SDK reference.
 
 ## 🔌 OpenAI-Compatible API
 
-nanobot can expose a minimal OpenAI-compatible endpoint for local integrations:
+nano-grive can expose a minimal OpenAI-compatible endpoint for local integrations:
 
 ```bash
-pip install "nanobot-ai[api]"
-nanobot serve
+pip install "nano-grive[api]"
+nano-grive serve
 ```
 
 By default, the API binds to `127.0.0.1:8900`. You can change this in `config.json`.
@@ -1841,20 +1756,20 @@ print(resp.choices[0].message.content)
 ## 🐳 Docker
 
 > [!TIP]
-> The `-v ~/.nanobot:/home/nanobot/.nanobot` flag mounts your local config directory into the container, so your config and workspace persist across container restarts.
-> The container runs as user `nanobot` (UID 1000). If you get **Permission denied**, fix ownership on the host first: `sudo chown -R 1000:1000 ~/.nanobot`, or pass `--user $(id -u):$(id -g)` to match your host UID. Podman users can use `--userns=keep-id` instead.
+> The `-v ~/.nano-grive:/home/nano-grive/.nano-grive` flag mounts your local config directory into the container, so your config and workspace persist across container restarts.
+> The container runs as user `nano-grive` (UID 1000). If you get **Permission denied**, fix ownership on the host first: `sudo chown -R 1000:1000 ~/.nano-grive`, or pass `--user $(id -u):$(id -g)` to match your host UID. Podman users can use `--userns=keep-id` instead.
 
 ### Docker Compose
 
 ```bash
-docker compose run --rm nanobot-cli onboard   # first-time setup
-vim ~/.nanobot/config.json                     # add API keys
-docker compose up -d nanobot-gateway           # start gateway
+docker compose run --rm nano-grive-cli onboard   # first-time setup
+vim ~/.nano-grive/config.json                     # add API keys
+docker compose up -d nano-grive-gateway           # start gateway
 ```
 
 ```bash
-docker compose run --rm nanobot-cli agent -m "Hello!"   # run CLI
-docker compose logs -f nanobot-gateway                   # view logs
+docker compose run --rm nano-grive-cli agent -m "Hello!"   # run CLI
+docker compose logs -f nano-grive-gateway                   # view logs
 docker compose down                                      # stop
 ```
 
@@ -1862,33 +1777,33 @@ docker compose down                                      # stop
 
 ```bash
 # Build the image
-docker build -t nanobot .
+docker build -t nano-grive .
 
 # Initialize config (first time only)
-docker run -v ~/.nanobot:/home/nanobot/.nanobot --rm nanobot onboard
+docker run -v ~/.nano-grive:/home/nano-grive/.nano-grive --rm nano-grive onboard
 
 # Edit config on host to add API keys
-vim ~/.nanobot/config.json
+vim ~/.nano-grive/config.json
 
 # Run gateway (connects to enabled channels, e.g. Telegram/Discord/Mochat)
-docker run -v ~/.nanobot:/home/nanobot/.nanobot -p 18790:18790 nanobot gateway
+docker run -v ~/.nano-grive:/home/nano-grive/.nano-grive -p 18790:18790 nano-grive gateway
 
 # Or run a single command
-docker run -v ~/.nanobot:/home/nanobot/.nanobot --rm nanobot agent -m "Hello!"
-docker run -v ~/.nanobot:/home/nanobot/.nanobot --rm nanobot status
+docker run -v ~/.nano-grive:/home/nano-grive/.nano-grive --rm nano-grive agent -m "Hello!"
+docker run -v ~/.nano-grive:/home/nano-grive/.nano-grive --rm nano-grive status
 ```
 
 ## 🐧 Linux Service
 
 Run the gateway as a systemd user service so it starts automatically and restarts on failure.
 
-**1. Find the nanobot binary path:**
+**1. Find the nano-grive binary path:**
 
 ```bash
-which nanobot   # e.g. /home/user/.local/bin/nanobot
+which nano-grive   # e.g. /home/user/.local/bin/nano-grive
 ```
 
-**2. Create the service file** at `~/.config/systemd/user/nanobot-gateway.service` (replace `ExecStart` path if needed):
+**2. Create the service file** at `~/.config/systemd/user/nano-grive-gateway.service` (replace `ExecStart` path if needed):
 
 ```ini
 [Unit]
@@ -1897,7 +1812,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=%h/.local/bin/nanobot gateway
+ExecStart=%h/.local/bin/nano-grive gateway
 Restart=always
 RestartSec=10
 NoNewPrivileges=yes
@@ -1912,15 +1827,15 @@ WantedBy=default.target
 
 ```bash
 systemctl --user daemon-reload
-systemctl --user enable --now nanobot-gateway
+systemctl --user enable --now nano-grive-gateway
 ```
 
 **Common operations:**
 
 ```bash
-systemctl --user status nanobot-gateway        # check status
-systemctl --user restart nanobot-gateway       # restart after config changes
-journalctl --user -u nanobot-gateway -f        # follow logs
+systemctl --user status nano-grive-gateway        # check status
+systemctl --user restart nano-grive-gateway       # restart after config changes
+journalctl --user -u nano-grive-gateway -f        # follow logs
 ```
 
 If you edit the `.service` file itself, run `systemctl --user daemon-reload` before restarting.
@@ -1934,7 +1849,7 @@ If you edit the `.service` file itself, run `systemctl --user daemon-reload` bef
 ## 📁 Project Structure
 
 ```
-nanobot/
+nano-grive/
 ├── agent/          # 🧠 Core agent logic
 │   ├── loop.py     #    Agent loop (LLM ↔ tool execution)
 │   ├── context.py  #    Prompt builder
@@ -1966,7 +1881,7 @@ PRs welcome! The codebase is intentionally small and readable. 🤗
 
 **Unsure which branch to target?** See [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
 
-**Roadmap** — Pick an item and [open a PR](https://github.com/HKUDS/nanobot/pulls)!
+**Roadmap** — Pick an item and [open a PR](https://github.com/JesusGon98/Nano-Grive/pulls)!
 
 - [ ] **Multi-modal** — See and hear (images, voice, video)
 - [ ] **Long-term memory** — Never forget important context
@@ -1976,29 +1891,29 @@ PRs welcome! The codebase is intentionally small and readable. 🤗
 
 ### Contributors
 
-<a href="https://github.com/HKUDS/nanobot/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=HKUDS/nanobot&max=100&columns=12&updated=20260210" alt="Contributors" />
+<a href="https://github.com/JesusGon98/Nano-Grive/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=JesusGon98/Nano-Grive&max=100&columns=12&updated=20260210" alt="Contributors" />
 </a>
 
 
 ## ⭐ Star History
 
 <div align="center">
-  <a href="https://star-history.com/#HKUDS/nanobot&Date">
+  <a href="https://star-history.com/#JesusGon98/Nano-Grive&Date">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=HKUDS/nanobot&type=Date&theme=dark" />
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=HKUDS/nanobot&type=Date" />
-      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=HKUDS/nanobot&type=Date" style="border-radius: 15px; box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=JesusGon98/Nano-Grive&type=Date&theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=JesusGon98/Nano-Grive&type=Date" />
+      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=JesusGon98/Nano-Grive&type=Date" style="border-radius: 15px; box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);" />
     </picture>
   </a>
 </div>
 
 <p align="center">
-  <em> Thanks for visiting ✨ nanobot!</em><br><br>
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=HKUDS.nanobot&style=for-the-badge&color=00d4ff" alt="Views">
+  <em> Thanks for visiting ✨ nano-grive!</em><br><br>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=JesusGon98.Nano-Grive&style=for-the-badge&color=00d4ff" alt="Views">
 </p>
 
 
 <p align="center">
-  <sub>nanobot is for educational, research, and technical exchange purposes only</sub>
+  <sub>nano-grive is for educational, research, and technical exchange purposes only</sub>
 </p>

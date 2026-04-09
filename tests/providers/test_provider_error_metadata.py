@@ -1,7 +1,7 @@
 from types import SimpleNamespace
 
-from nanobot.providers.anthropic_provider import AnthropicProvider
-from nanobot.providers.openai_compat_provider import OpenAICompatProvider
+from nano_grive.providers.anthropic_provider import AnthropicProvider
+from nano_grive.providers.openai_compat_provider import OpenAICompatProvider
 
 
 def _fake_response(

@@ -4,10 +4,10 @@ from types import SimpleNamespace
 
 import pytest
 
-from nanobot.bus.events import InboundMessage
-from nanobot.command.builtin import cmd_dream_log, cmd_dream_restore
-from nanobot.command.router import CommandContext
-from nanobot.utils.gitstore import CommitInfo
+from nano_grive.bus.events import InboundMessage
+from nano_grive.command.builtin import cmd_dream_log, cmd_dream_restore
+from nano_grive.command.router import CommandContext
+from nano_grive.utils.gitstore import CommitInfo
 
 
 class _FakeStore:

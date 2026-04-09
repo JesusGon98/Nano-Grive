@@ -1,8 +1,8 @@
-# Contributing to nanobot
+# Contributing to nano-grive
 
 Thank you for being here.
 
-nanobot is built with a simple belief: good tools should feel calm, clear, and humane.
+nano-grive is built with a simple belief: good tools should feel calm, clear, and humane.
 We care deeply about useful features, but we also believe in achieving more with less:
 solutions should be powerful without becoming heavy, and ambitious without becoming
 needlessly complicated.
@@ -71,8 +71,8 @@ Keep setup boring and reliable. The goal is to get you into the code quickly:
 
 ```bash
 # Clone the repository
-git clone https://github.com/HKUDS/nanobot.git
-cd nanobot
+git clone https://github.com/JesusGon98/Nano-Grive.git
+cd nano-grive
 
 # Install with dev dependencies
 pip install -e ".[dev]"
@@ -81,15 +81,15 @@ pip install -e ".[dev]"
 pytest
 
 # Lint code
-ruff check nanobot/
+ruff check nano-grive/
 
 # Format code
-ruff format nanobot/
+ruff format nano-grive/
 ```
 
 ## Code Style
 
-We care about more than passing lint. We want nanobot to stay small, calm, and readable.
+We care about more than passing lint. We want nano-grive to stay small, calm, and readable.
 
 When contributing, please aim for code that feels:
 
@@ -113,10 +113,10 @@ In practice:
 
 If you have questions, ideas, or half-formed insights, you are warmly welcome here.
 
-Please feel free to open an [issue](https://github.com/HKUDS/nanobot/issues), join the community, or simply reach out:
+Please feel free to open an [issue](https://github.com/JesusGon98/Nano-Grive/issues), join the community, or simply reach out:
 
 - [Discord](https://discord.gg/MnCvHqpUGB)
 - [Feishu/WeChat](./COMMUNICATION.md)
 - Email: Xubin Ren (@Re-bin) — <xubinrencs@gmail.com>
 
-Thank you for spending your time and care on nanobot. We would love for more people to participate in this community, and we genuinely welcome contributions of all sizes.
+Thank you for spending your time and care on nano-grive. We would love for more people to participate in this community, and we genuinely welcome contributions of all sizes.

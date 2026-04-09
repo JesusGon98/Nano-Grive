@@ -13,8 +13,8 @@ import websockets
 from websockets.exceptions import ConnectionClosed
 from websockets.frames import Close
 
-from nanobot.bus.events import OutboundMessage
-from nanobot.channels.websocket import (
+from nano_grive.bus.events import OutboundMessage
+from nano_grive.channels.websocket import (
     WebSocketChannel,
     WebSocketConfig,
     _issue_route_secret_matches,
@@ -345,7 +345,7 @@ async def test_wrong_path_returns_404(bus: MagicMock) -> None:
 
 
 def test_registry_discovers_websocket_channel() -> None:
-    from nanobot.channels.registry import load_channel_class
+    from nano_grive.channels.registry import load_channel_class
 
     cls = load_channel_class("websocket")
     assert cls.name == "websocket"

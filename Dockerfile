@@ -16,12 +16,12 @@ WORKDIR /app
 
 # Install Python dependencies first (cached layer)
 COPY pyproject.toml README.md LICENSE ./
-RUN mkdir -p nanobot bridge && touch nanobot/__init__.py && \
+RUN mkdir -p nano_grive bridge && touch nano_grive/__init__.py && \
     uv pip install --system --no-cache . && \
-    rm -rf nanobot bridge
+    rm -rf nano_grive bridge
 
 # Copy the full source and install
-COPY nanobot/ nanobot/
+COPY nano_grive/ nano_grive/
 COPY bridge/ bridge/
 RUN uv pip install --system --no-cache .
 
@@ -33,15 +33,15 @@ RUN git config --global --add url."https://github.com/".insteadOf ssh://git@gith
 WORKDIR /app
 
 # Create non-root user and config directory
-RUN useradd -m -u 1000 -s /bin/bash nanobot && \
-    mkdir -p /home/nanobot/.nanobot && \
-    chown -R nanobot:nanobot /home/nanobot /app
+RUN useradd -m -u 1000 -s /bin/bash nano-grive && \
+    mkdir -p /home/nano-grive/.nano-grive && \
+    chown -R nano-grive:nano-grive /home/nano-grive /app
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN sed -i 's/\r$//' /usr/local/bin/entrypoint.sh && chmod +x /usr/local/bin/entrypoint.sh
 
-USER nanobot
-ENV HOME=/home/nanobot
+USER nano-grive
+ENV HOME=/home/nano-grive
 
 # Gateway default port
 EXPOSE 18790

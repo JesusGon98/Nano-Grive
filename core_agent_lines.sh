@@ -36,18 +36,18 @@ print_row() {
   printf "  %-16s %6s lines\n" "$label" "$count"
 }
 
-echo "nanobot line count"
+echo "nano-grive line count"
 echo "=================="
 echo ""
 
 echo "Core runtime"
 echo "------------"
-core_agent=$(count_top_level_py_lines "nanobot/agent")
-core_bus=$(count_top_level_py_lines "nanobot/bus")
-core_config=$(count_top_level_py_lines "nanobot/config")
-core_cron=$(count_top_level_py_lines "nanobot/cron")
-core_heartbeat=$(count_top_level_py_lines "nanobot/heartbeat")
-core_session=$(count_top_level_py_lines "nanobot/session")
+core_agent=$(count_top_level_py_lines "nano-grive/agent")
+core_bus=$(count_top_level_py_lines "nano-grive/bus")
+core_config=$(count_top_level_py_lines "nano-grive/config")
+core_cron=$(count_top_level_py_lines "nano-grive/cron")
+core_heartbeat=$(count_top_level_py_lines "nano-grive/heartbeat")
+core_session=$(count_top_level_py_lines "nano-grive/session")
 
 print_row "agent/" "$core_agent"
 print_row "bus/" "$core_bus"
@@ -61,12 +61,12 @@ core_total=$((core_agent + core_bus + core_config + core_cron + core_heartbeat +
 echo ""
 echo "Separate buckets"
 echo "----------------"
-extra_tools=$(count_recursive_py_lines "nanobot/agent/tools")
-extra_skills=$(count_skill_lines "nanobot/skills")
-extra_api=$(count_recursive_py_lines "nanobot/api")
-extra_cli=$(count_recursive_py_lines "nanobot/cli")
-extra_channels=$(count_recursive_py_lines "nanobot/channels")
-extra_utils=$(count_recursive_py_lines "nanobot/utils")
+extra_tools=$(count_recursive_py_lines "nano-grive/agent/tools")
+extra_skills=$(count_skill_lines "nano-grive/skills")
+extra_api=$(count_recursive_py_lines "nano-grive/api")
+extra_cli=$(count_recursive_py_lines "nano-grive/cli")
+extra_channels=$(count_recursive_py_lines "nano-grive/channels")
+extra_utils=$(count_recursive_py_lines "nano-grive/utils")
 
 print_row "tools/" "$extra_tools"
 print_row "skills/" "$extra_skills"
@@ -86,7 +86,7 @@ print_row "extra total" "$extra_total"
 echo ""
 echo "Notes"
 echo "-----"
-echo "  - agent/ only counts top-level Python files under nanobot/agent"
-echo "  - tools/ is counted separately from nanobot/agent/tools"
+echo "  - agent/ only counts top-level Python files under nano-grive/agent"
+echo "  - tools/ is counted separately from nano-grive/agent/tools"
 echo "  - skills/ counts .md, .py, and .sh files"
-echo "  - not included here: command/, providers/, security/, templates/, nanobot.py, root files"
+echo "  - not included here: command/, providers/, security/, templates/, nano-grive.py, root files"

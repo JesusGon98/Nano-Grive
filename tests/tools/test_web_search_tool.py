@@ -5,8 +5,8 @@ import asyncio
 import httpx
 import pytest
 
-from nanobot.agent.tools.web import WebSearchTool
-from nanobot.config.schema import WebSearchConfig
+from nano_grive.agent.tools.web import WebSearchTool
+from nano_grive.config.schema import WebSearchConfig
 
 
 def _tool(provider: str = "brave", api_key: str = "", base_url: str = "") -> WebSearchTool:
@@ -31,7 +31,7 @@ async def test_brave_search(monkeypatch):
 
     monkeypatch.setattr(httpx.AsyncClient, "get", mock_get)
     tool = _tool(provider="brave", api_key="brave-key")
-    result = await tool.execute(query="nanobot", count=1)
+    result = await tool.execute(query="nano_grive", count=1)
     assert "NanoBot" in result
     assert "https://example.com" in result
 
@@ -75,8 +75,8 @@ async def test_duckduckgo_search(monkeypatch):
         def text(self, query, max_results=5):
             return [{"title": "DDG Result", "href": "https://ddg.example", "body": "From DuckDuckGo"}]
 
-    monkeypatch.setattr("nanobot.agent.tools.web.DDGS", MockDDGS, raising=False)
-    import nanobot.agent.tools.web as web_mod
+    monkeypatch.setattr("nano_grive.agent.tools.web.DDGS", MockDDGS, raising=False)
+    import nano_grive.agent.tools.web as web_mod
     monkeypatch.setattr(web_mod, "DDGS", MockDDGS, raising=False)
 
     from ddgs import DDGS

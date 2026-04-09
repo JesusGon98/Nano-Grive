@@ -34,3 +34,12 @@ This file documents non-obvious constraints and usage patterns.
 ## cron — Scheduled Reminders
 
 - Please refer to cron skill for usage.
+
+## get_weather — Servicio Meteorológico Externo
+
+- **Endpoint:** https://api.open-meteo.com/v1/forecast
+- **Parámetros requeridos:** `latitude` (float), `longitude` (float), `current_weather=true`
+- **Ejemplo de llamada:** `https://api.open-meteo.com/v1/forecast?latitude=40.42&longitude=-3.70&current_weather=true`
+- **Instrucción:** Cuando el usuario pregunte por el clima, la temperatura, si va a llover, si necesita paraguas, o cualquier consulta meteorológica, realiza una petición GET a este endpoint usando la herramienta `web_fetch`. No necesitas API key.
+- **Interpretación:** Del JSON devuelto, extrae `current_weather.temperature` (°C) y `current_weather.windspeed` (km/h) para dar una respuesta útil y contextualizada al usuario.
+- **Coordenadas comunes:** Madrid (40.42, -3.70), Barcelona (41.39, 2.15), México DF (19.43, -99.13), Buenos Aires (-34.60, -58.38).
